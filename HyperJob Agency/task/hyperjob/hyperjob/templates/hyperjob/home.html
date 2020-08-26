@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Username: {{username}}</h2>
+    <form method="post" action="/resume/new">{% csrf_token %}
+        <label for="desc_resume" >Description</label>
+        <input id="desc_resume" name="description" type="text" required>
+        <button type="submit">Post Resume</button>
+    </form>
+    <form method="post" action="/vacancy/new">{% csrf_token %}
+        <label for="desc_vacancy">Description</label>
+        <input id="desc_vacancy" name="description" type="text" required>
+        <button type="submit">Post Vacancy</button>
+    </form>
+    <div><a href="/">Back</a></div>
+</body>
+</html>
